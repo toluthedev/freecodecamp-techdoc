@@ -5,12 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <nav id="navbar">
+        <header> JS Documentation </header> 
+        <a class="nav-link" href="#Introduction">Introduction</a> 
+
+        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+
+        <a class="nav-link" href="#Javascript_And_Java">JavaScript and Java </a>
+
+        <a class="nav-link" href="#Hello_World">Hello World</a> 
+
+        <a class="nav-link" href="#Variables">Variables</a>
+
+        <a class="nav-link" href="#Declaring_Variables">Declaring Variables </a>
+
+        <a class="nav-link" href="#Variable_Scope">Variable Scope</a> 
+
+        <a class="nav-link" href="#Constants">Constants</a>
+
+        <a class="nav-link" href="#Data_Types">Data Types</a> 
+
+        <a class="nav-link" href="#ifelse_statement">If...else statement</a>
+
+        <a class="nav-link" href="#While_Statement"> While Statement</a> 
+
+        <a class="nav-link" href="#Reference"> Reference </a>
+       
+    </nav>
+
 </head>
+
 <body>
     <main id="main-doc">
 
-    <section class="main-section">
-        <h1> Introduction</h1>
+    <section class="main-section" id="Introduction">
+        <header> Introduction</header>
         <p> JavaScript is a cross-platform, object-oriented scripting language. 
             It is a small and lightweight language.
              Inside a host environment (for example, a web browser), 
@@ -25,8 +55,8 @@
 
     </section>
     
-    <section class="main-section">
-        <h1> What you should already know </h1>
+    <section class="main-section" id="What_you_should_already_know">
+       <header> What you should already know </header>
         <p> This guide assumes you have the following basic background: </p>
         <ul>
             <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
@@ -35,8 +65,8 @@
         </ul>
     </section>
 
-    <section class="main-section">
-        <h1> JavaScript and Java </h1>
+    <section class="main-section" id="Javascript_And_Java">
+       <header> JavaScript and Java </header>
 
         <p> 
             JavaScript and Java are similar in some ways but fundamentally different in some others. 
@@ -60,17 +90,19 @@
         </p>
     </section>
 
-    <section class="main-section">
-        <h1> Hello World </h1>
+    <section class="main-section" id="Hello_World">
+        <header> Hello World </header>
         <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code: </p>
-        <p> 
+       
+        <code>
             function greetMe(yourName) { alert("Hello " + yourName); } 
-            greetMe("World");  </p>
+            greetMe("World");  </code>
+
             <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser! </p>
     </section>
 
-    <section class="main-section">
-        <h1> Variables </h1>
+    <section class="main-section" id="Variables">
+       <header> Variables </header>
         <p> You use variables as symbolic names for values in your application. 
             The names of variables, called identifiers, conform to certain rules.</p>
 
@@ -82,28 +114,30 @@
                Some examples of legal names are Number_hits, temp99, and _name.</p>
     </section>
 
-    <section class="main-section">
-        <h1> Declaring variables</h1>
+    <section class="main-section" id="Declaring_Variables">
+       <header> Declaring variable </header>
         <p>You can declare a variable in three ways:</p>
         <p>With the keyword var. For example, </p>
 
-        <p> var x = 42.</p>
+        <code> var x = 42.</code>
+
         <p> This syntax can be used to declare both local and global variables.</p>
         <p> By simply assigning it a value. For example,</p>
-        <p> x = 42.</p>
+
+        <code> x = 42.</code>
 
         <p> This always declares a global variable. 
             It generates a strict JavaScript warning. 
             You shouldn't use this variant.</p>
 
             <p> With the keyword let. For example,</p>
-            <p>let y = 13. </p>
+            <code> let y = 13. </code>
             <p>This syntax can be used to declare a block scope local variable.
                  See Variable scope below. </p>
     </section>
 
-    <section class="main-section">
-        <h1> Variable scope </h1>
+    <section class="main-section" id="Variable_Scope">
+       <header> Variable scope </header>
         <p>
             When you declare a variable outside of any function, it is called a global variable, 
             because it is available to any other code in the current document. 
@@ -114,15 +148,17 @@
             For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.
         </p>
 
-        <p>if (true) { var x = 5; } console.log(x); // 5 </p>
+        <code> if (true) { var x = 5; } console.log(x); // 5 </code>
+
         <p> This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
 
-        <p> if (true) { let y = 5; } console.log(y); // ReferenceError:
-             y is not defined</p>
+        <code> if (true) { let y = 5; } console.log(y); // ReferenceError:
+             y is not defined</code>
+
     </section>
 
-    <section> 
-        <h1> Global variables </h1>
+    <section class="main-section" id="Global_Variable">
+       <header> Global variables </header>
 
         <p>Global variables are in fact properties of the global object. In web pages the global object is window,
              so you can set and access global variables using the window.variable syntax.
@@ -135,13 +171,14 @@
 
     </section>
 
-    <section class="main-section">
-        <h1> Constants</h1>
+    <section class="main-section" id="Constant">
+
+       <header> Constant </header>
         <p>You can create a read-only, named constant with the const keyword. 
             The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter,
              underscore or dollar sign and can contain alphabetic, numeric, or underscore characters. </p>
 
-             <p>const PI = 3.14; </p>
+             <code> const PI = 3.14; </code>
 
              <p> A constant cannot change value through assignment or be re-declared while the script is running.
                   It has to be initialized to a value.</p>
@@ -155,14 +192,15 @@
                     You cannot declare a constant with the same name as a function or variable in the same scope. For example:
                   </p>
 
-                  <p>
+                  <code>
                     // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL 
                     CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements }
-                  </p>
+                  </code>
 
                   <p> 
                     However, object attributes are not protected, so the following statement is executed without problems.
-                  </p> <ul>
+                  </p>
+                   <ul>
                  <li> Client-side JavaScript extends the core language by supplying 
                      objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements 
                      on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
@@ -172,20 +210,20 @@
                           from one invocation to another of the application, or perform file manipulations on a server.</li>
              </ul>
 
-                  <p>
+                  <code>
                     const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue"; 
-                  </p>
+                  </code>
     </section>
 
-    <section class="main-section">
-    <h1> Data types </h1>
+    <section class="main-section" id="Data_Types">
+   <header> Data types </header>
     <p> The latest ECMAScript standard defines seven data types: </p>
 
 <ul>
     <li> Six data types that are primitives: </li>
     <li>Boolean. true and false.</li>
-    <li> null. A special keyword denoting a null value. 
- Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+    <li> null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is
+         not the same as Null, NULL, or any other variant.</li>
 
  <li> undefined. A top-level property whose value is undefined.</li>
  <li>Number. 42 or 3.14159. </li>
@@ -202,44 +240,46 @@
 
     </section>
 
-    <section class="main-section">
-        <h1>if...else statement</h1>
+    <section class="main-section" id="ifelse_statement">
+       <header> if...else statement </header>
         <p>Use the if statement to execute a statement if a logical condition is true. 
             Use the optional else clause to execute a statement if the condition is false. 
             An if statement looks as follows: </p>
 
-            <p>if (condition) { statement_1; } else { statement_2; } </p>
+            <code> if (condition) { statement_1; } else { statement_2; } </code>
+
             <p>In the case of multiple conditions only the first logical condition which evaluates to true will be executed. 
                 To execute multiple statements, group them within a block statement ({ ... }) . 
                 In general, it's good practice to always use block statements, especially when nesting if statements: </p>
 
-                <p>
+                <code>
                     if (condition) { statement_1_runs_if_condition_is_true; 
                         statement_2_runs_if_condition_is_true; } else { 
                             statement_3_runs_if_condition_is_false; 
                             statement_4_runs_if_condition_is_false; }
-                </p>
+                        </code>
 
                 <p>
                     It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. 
                     For example, do not use the following code:
                 </p>
 
-                <p> 
+                <code>
                     if (x = y) { /* statements here */ }
-                </p>
+                </code>
 
                 <p>If you need to use an assignment in a conditional expression, a common practice is to put 
                     additional parentheses around the assignment. For example: </p>
 
-                    <p> if ((x = y)) { /* statements here */ }</p>
+                    <code> if ((x = y)) { /* statements here */ }</code>
     </section>
 
-    <section class="main-section">
-        <h1>while statement </h1>
+    <section class="main-section" id="While_Statement">
+       <header> while statement </header>
         <p>A while statement executes its statements as long as a specified condition evaluates to true. 
             A while statement looks as follows: </p>
-            <p>while (condition) statement </p>
+            
+               <code>  while (condition) statement </code>
 
             <p> 
                 If the condition becomes false,
@@ -263,9 +303,9 @@ The following while loop iterates as long as n is less than three:
 </p>
 
 
-<p>
+<code>
     var n = 0; var x = 0; while (n < 3) { n++; x += n; }
-</p>
+</code>
         
 
 <p>With each iteration, the loop increments n and adds that value to x.
@@ -281,8 +321,8 @@ The following while loop iterates as long as n is less than three:
 <p> After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
     </section>
 
-    <section class="main-section">
-        <h1> Function declaration </h1>
+    <section class="main-section" id="Function_Declaration">
+       <header> Function declaration </header>
         <p> A function definition (also called a function declaration, or function statement) 
             consists of the function keyword, followed by:</p>
 
@@ -292,19 +332,19 @@ The following while loop iterates as long as n is less than three:
                 <li> The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
             </ul>
             <p> For example, the following code defines a simple function named square:</p>
-            <p>function square(number) { return number * number; }</p>
+            <code> function square(number) { return number * number; }</code>
             <p>The function square takes one argument, called number. 
                 The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. 
                 The return statement specifies the value returned by the function. </p>
 
-                <p>return number * number; </p>
+                <code> return number * number; </code>
                 <p>Primitive parameters (such as a number) are passed to functions by value; 
                     the value is passed to the function, but if the function changes the value 
                     of the parameter, this change is not reflected globally or in the calling function. </p>
     </section>
 
-    <section class="main-section">
-        <h1>Reference</h1>
+    <section class="main-section" id="Reference">
+       <header> Reference </header>
         <ul>
             <li>All the documentation in this page is taken from MDN </li>
         </ul>
