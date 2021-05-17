@@ -1,0 +1,53 @@
+@media screen {
+    
+}
+header {
+    font-size:40px;
+}
+
+#navbar {   
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color:pink;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    border-right: solid ;
+    border-left: solid;
+   
+   
+   
+}
+
+.nav-link {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-bottom:solid;
+}
+
+
+
+
+#main-doc{
+    margin-left: 300px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+
+#main-doc header {
+    font-size: 40px;
+}
+
+code{
+   /*  background-color: bisque; */
+    color: cornflowerblue;
+    
+}
+
